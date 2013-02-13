@@ -8,7 +8,7 @@
 
 #import "MRDAppDelegate.h"
 
-#import "MRDViewController.h"
+#import "MRDStateListViewController.h"
 
 @implementation MRDAppDelegate
 
@@ -16,12 +16,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    self.viewController = [[MRDViewController alloc] initWithNibName:@"MRDViewController_iPhone" bundle:nil];
-	} else {
-	    self.viewController = [[MRDViewController alloc] initWithNibName:@"MRDViewController_iPad" bundle:nil];
-	}
-	self.window.rootViewController = self.viewController;
+	self.stateListTableViewController = [[MRDStateListViewController alloc] initWithNibName:@"MRDStateListViewController" bundle:nil];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:self.stateListTableViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }

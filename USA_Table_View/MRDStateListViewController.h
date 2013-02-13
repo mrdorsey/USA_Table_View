@@ -1,5 +1,5 @@
 //
-//  MRDViewController.h
+//  MRDStateListViewController.h
 //  USA_Table_View
 //
 //  Created by Michael Dorsey on 2/11/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MRDViewController : UIViewController
+@interface MRDStateListViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 
 @end

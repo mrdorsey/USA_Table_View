@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MRDStateListViewController.h"
 
 @class MRDViewController;
 
@@ -14,6 +15,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) MRDViewController *viewController;
+@property (strong, nonatomic) MRDStateListViewController *stateListTableViewController;
 
 @end
